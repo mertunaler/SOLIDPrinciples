@@ -3,12 +3,19 @@ using Microsoft.VisualBasic;
 using System.Diagnostics;
 /*
 This example is created for demonstrating the SOLID's S principle --> Single Responsibility Principle. 
-Journal class has AddEntry for adding a string, RemoveEntry for deleting a string, ToString for ensuring the text is string. 
-After some time persistence implementation which is saving to a file, is needed. If we go and add that into the Journal class,
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+Class Definitions:
+Journal class has AddEntry for adding a string, RemoveEntry for deleting a string, ToString for ensuring the text is string.
+Persistence class has SaveToFile which creates a file and writes to that file.
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+After some time persistence implementation is needed to save journals to a file. If we go and add that into the Journal class,
 we would have violated the Single Responsibility Principle. In order to solve that issue, we create another class Persistence and,
 add all of the related implementations to that class. 
 */
-
 
 public class Journal
 {
@@ -39,10 +46,7 @@ public class Persistence
             File.WriteAllText(fileName, journal.ToString());
         }
     }
-
 }
-
-
 public class Demo
 {
     public static void Main(string[] args)
@@ -56,5 +60,4 @@ public class Demo
         p.SaveToFile(j, fileName);
         Process.Start(fileName);
     }
-
 }
