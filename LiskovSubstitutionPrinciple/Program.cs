@@ -1,35 +1,66 @@
-﻿public class Rectangle
-{
-    public int Width { get; set; }  
-    public int Height { get; set; }
+﻿using static System.Console;
 
-    public Rectangle()
+
+    public class Rectangle
     {
+        //public int Width { get; set; }
+        //public int Height { get; set; }
 
+        public virtual int Width { get; set; }
+        public virtual int Height { get; set; }
+
+        public Rectangle()
+        {
+
+        }
+
+        public Rectangle(int width, int height)
+        {
+            Width = width;
+            Height = height;
+        }
+
+        public override string ToString()
+        {
+            return $"{nameof(Width)}: {Width}, {nameof(Height)}: {Height}";
+        }
     }
-    public Rectangle(int width, int height)
+
+    public class Square : Rectangle
     {
-        Width= width;
-        Height= height;
+        //public new int Width
+        //{
+        //  set { base.Width = base.Height = value; }
+        //}
+
+        //public new int Height
+        //{ 
+        //  set { base.Width = base.Height = value; }
+        //}
+
+        public override int Width 
+        {
+            set { base.Width = base.Height = value; }
+        }
+
+        public override int Height
+        {
+            set { base.Width = base.Height = value; }
+        }
     }
 
-    public override string ToString()
+    public class Demo
     {
-        return $"{nameof(Width)} : {Width}, {nameof(Height)}: {Height}";
+        static public int Area(Rectangle r) => r.Width * r.Height;
+
+        static void Main(string[] args)
+        {
+            Rectangle rc = new Rectangle(2, 3);
+            WriteLine($"{rc} has area {Area(rc)}");
+
+            
+            Rectangle sq = new Square();
+            sq.Width = 4;
+            WriteLine($"{sq} has area {Area(sq)}");
+        }
     }
-
-
-}
-
-
-
-public class Demo
-{
-    static public int Area(Rectangle r) { return r.Height* r.Width; }
-    public static void Main(string[] args)
-    {
-        Rectangle r = new Rectangle(1,3);
-        Console.WriteLine($"{r} has area {Area(r)}");
-
-    }
-}
