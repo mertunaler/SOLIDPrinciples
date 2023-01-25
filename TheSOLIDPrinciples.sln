@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SingleResponsibility", "SingleResponsibility\SingleResponsibility.csproj", "{940C3867-1190-423B-A9B2-FFFF68B3A0F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingleResponsibility", "SingleResponsibility\SingleResponsibility.csproj", "{940C3867-1190-423B-A9B2-FFFF68B3A0F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OpenClosedPrinciple", "OpenClosedPrinciple\OpenClosedPrinciple.csproj", "{985B503A-6F62-47D4-9E67-DBCC295B8CE3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenClosedPrinciple", "OpenClosedPrinciple\OpenClosedPrinciple.csproj", "{985B503A-6F62-47D4-9E67-DBCC295B8CE3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiskovSubstitutionPrinciple", "LiskovSubstitutionPrinciple\LiskovSubstitutionPrinciple.csproj", "{48471A83-F7DF-42E4-ACDB-10B0E815A3E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LiskovSubstitutionPrinciple", "LiskovSubstitutionPrinciple\LiskovSubstitutionPrinciple.csproj", "{48471A83-F7DF-42E4-ACDB-10B0E815A3E4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InterfaceSegragationPrinciple", "InterfaceSegragationPrinciple\InterfaceSegragationPrinciple.csproj", "{DE350B04-BE75-4367-84EE-5D1F642832C2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{48471A83-F7DF-42E4-ACDB-10B0E815A3E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{48471A83-F7DF-42E4-ACDB-10B0E815A3E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{48471A83-F7DF-42E4-ACDB-10B0E815A3E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE350B04-BE75-4367-84EE-5D1F642832C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE350B04-BE75-4367-84EE-5D1F642832C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE350B04-BE75-4367-84EE-5D1F642832C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE350B04-BE75-4367-84EE-5D1F642832C2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
